@@ -1,32 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PSBLDockWidgetBase</class>
- <widget class="QDockWidget" name="PSBLDockWidgetBase">
+ <class>SetbackLineDockWidgetBase</class>
+ <widget class="QDockWidget" name="SetbackLineDockWidgetBase">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>232</width>
-    <height>141</height>
+    <width>948</width>
+    <height>270</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Pretty setback building lines / Ładne linie zabudowy</string>
+   <string>Setback lines</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>Replace this QLabel
-with the desired
-plugin content.</string>
-      </property>
-     </widget>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Wybierz warstwę liniową</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QgsMapLayerComboBox" name="ComboBox">
+        <property name="filters">
+         <set>Qgis::LineLayer</set>
+        </property>
+        <property name="showCrs">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Wybierz skalę</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QRadioButton" name="rbScale500">
+          <property name="text">
+           <string>1:500</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbScale1000">
+          <property name="text">
+           <string>1:1000</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbScale2000">
+          <property name="text">
+           <string>1:2000</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rbScale5000">
+          <property name="text">
+           <string>1:5000</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pbGenerate">
+          <property name="text">
+           <string>Generuj punkty linii zabudowy i nadaj symbolizację</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbRotate">
+          <property name="text">
+           <string>Obróć zaznaczone punkty</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbLegendSymbol">
+          <property name="text">
+           <string>Nadaj symbolizację dla warstwy liniowej do legendy</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbPointSymbol">
+          <property name="text">
+           <string>Nadaj symbolizację dla punktów</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textBrowser"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsMapLayerComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qgsmaplayercombobox.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
