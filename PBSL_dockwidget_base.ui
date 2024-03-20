@@ -1,71 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>SetbackLineDockWidgetBase</class>
- <widget class="QDockWidget" name="SetbackLineDockWidgetBase">
+ <class>PSBLDockWidgetBase</class>
+ <widget class="QDockWidget" name="PSBLDockWidgetBase">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>948</width>
-    <height>270</height>
+    <width>905</width>
+    <height>235</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Setback lines</string>
+   <string>Pretty setback building lines / Ładne linie zabudowy</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0">
+    <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="label_2">
         <property name="text">
          <string>Wybierz warstwę liniową</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QgsMapLayerComboBox" name="ComboBox">
-        <property name="filters">
-         <set>Qgis::LineLayer</set>
-        </property>
-        <property name="showCrs">
-         <bool>true</bool>
-        </property>
-       </widget>
+       <widget class="QgsMapLayerComboBox" name="mMapLayerComboBox"/>
       </item>
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label">
         <property name="text">
          <string>Wybierz skalę</string>
         </property>
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QRadioButton" name="rbScale500">
+         <widget class="QRadioButton" name="radioButton_4">
           <property name="text">
            <string>1:500</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="rbScale1000">
+         <widget class="QRadioButton" name="radioButton_3">
           <property name="text">
            <string>1:1000</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="rbScale2000">
+         <widget class="QRadioButton" name="radioButton_2">
           <property name="text">
            <string>1:2000</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="rbScale5000">
+         <widget class="QRadioButton" name="radioButton">
           <property name="text">
            <string>1:5000</string>
           </property>
@@ -74,30 +67,30 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QPushButton" name="pbGenerate">
+         <widget class="QPushButton" name="pushButton_4">
           <property name="text">
            <string>Generuj punkty linii zabudowy i nadaj symbolizację</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pbRotate">
+         <widget class="QPushButton" name="pushButton_3">
           <property name="text">
            <string>Obróć zaznaczone punkty</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pbLegendSymbol">
+         <widget class="QPushButton" name="pushButton_2">
           <property name="text">
            <string>Nadaj symbolizację dla warstwy liniowej do legendy</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pbPointSymbol">
+         <widget class="QPushButton" name="pushButton">
           <property name="text">
            <string>Nadaj symbolizację dla punktów</string>
           </property>
@@ -105,10 +98,10 @@
         </item>
        </layout>
       </item>
-      <item>
-       <widget class="QTextBrowser" name="textBrowser"/>
-      </item>
      </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTextBrowser" name="textBrowser"/>
     </item>
    </layout>
   </widget>
